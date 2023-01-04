@@ -15,10 +15,10 @@ function Home() {
                 setState(response.data)
             }) 
         }}>Click here</button>
-        {state.map((obj,index)=>{
+        {  state.map((obj,index)=>{
             return(
-                <div className='container'>
-                    <Alert variant='success'>
+                <div key={index} className='container'>
+                    <Alert  variant='success'>
                         {index + 1} {obj.title} {obj.description}
                     </Alert>
                 </div>
