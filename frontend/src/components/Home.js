@@ -1,6 +1,9 @@
-import React from 'react'
-import axios from 'axios'
-import  {useState} from 'react'
+import React from 'react';
+import axios from 'axios';
+import  {useState} from 'react';
+import Alert from 'react-bootstrap/Alert';
+import './Home.css';
+
 
 function Home() {
     const [state,setState]= useState([])
@@ -14,10 +17,10 @@ function Home() {
         }}>Click here</button>
         {state.map((obj,index)=>{
             return(
-                <div>
-                    <h1>{index+1}</h1>
-                    <h4>{obj.title}</h4>
-                    <h4>{obj.description}</h4>
+                <div className='container'>
+                    <Alert variant='success'>
+                        {index + 1} {obj.title} {obj.description}
+                    </Alert>
                 </div>
             )
         })}
