@@ -1,11 +1,11 @@
 import './App.css';
-import React, { Component } from 'react'
- 
-
- class App extends Component{
-  constructor(props){
-    
-  }
- }
-
+import React from 'react'
+import Home from './components/Home';
+function App () {
+    return (
+        <div>
+            <Home />
+        </div>
+    )
+}
 export default App;
