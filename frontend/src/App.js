@@ -41,17 +41,18 @@ class App extends Component {
     renderTabList = () => {
         return (
             <div className="my-5 tab-list">
-                <span
+                <span style={{cursor:'pointer', color:'green',margin: '30px'}}
                     onClick={() => this.displayCompleted(true)}
                     className={this.state.viewCompleted ? "active" : ""}
                 >
-                    completed
+                    <b>completed</b>
                 </span>
-                <span
+
+                <span style={{ cursor: 'pointer', color: 'red', margin: '30px' }}
                     onClick={() => this.displayCompleted(false)}
                     className={this.state.viewCompleted ? "" : "active"}
                 >
-                    Incompleted
+                    <b>Incompleted</b> 
                 </span>
             </div>
         );
@@ -76,7 +77,7 @@ class App extends Component {
                     {item.title}
                 </span>
                 <span>
-                    <button
+                    <button style={{margin:'30px'}}
                         onClick={() => this.editItem(item)}
                         className="btn btn-secondary mr-2"
                     >
